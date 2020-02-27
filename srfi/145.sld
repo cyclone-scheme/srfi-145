@@ -6,14 +6,6 @@
       (syntax-rules ()
         ((assume expression message ...)
          (unless expression
-           (fatal-error "invalid assumption" (quote expression) (list message ...))))
+           (error "invalid assumption" (quote expression) (list message ...))))
         ((assume . _)
-         (syntax-error "invalid assume syntax"))))
-  (cond-expand
-    (debug
-     (begin
-       (define fatal-error error)))
-    (else
-     (begin
-       (define (fatal-error message . objs)
-         (car 0)))))))
+         (syntax-error "invalid assume syntax"))))))
