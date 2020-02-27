@@ -7,6 +7,7 @@
  (description    "Assumptions")
  (tags           "srfi" "language extensions")
  (docs           "https://github.com/cyclone-scheme/cyclone-winds/wiki/srfi-145")
+ (test           "tests.scm")
 
  (library
      (name (srfi 145))
